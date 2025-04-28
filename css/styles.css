@@ -1,0 +1,146 @@
+/* Estilos básicos compartidos para el proyecto de Desayunos Sorpresa */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff5f5;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #ff8e8e;
+  padding: 10px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  margin: 0 5px;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: #ff5252;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: #ff5252;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.success {
+  color: #28a745;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+  background-color: #ffe5e5;
+  border-top: 1px solid #ffcccc;
+}
+
+/* Estilos adicionales para tarjetas de productos */
+.product-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.price {
+  font-weight: bold;
+  color: #ff6b6b;
+  font-size: 18px;
+}
+
+/* Animación para mensajes y botones */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.mensaje-exito {
+  animation: pulse 1.5s ease infinite;
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

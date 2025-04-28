@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeliBreakfast - Resultados de Búsqueda</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Estilos específicos para la página de resultados */
+    .resultados-container {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-top: 20px;
+    }
+    
+    .tabla-resultados {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    
+    .tabla-resultados th, 
+    .tabla-resultados td {
+      border: 1px solid #ffcccc;
+      padding: 12px;
+      text-align: left;
+    }
+    
+    .tabla-resultados th {
+      background-color: #fff5f5;
+      font-weight: bold;
+      color: #ff5252;
+    }
+    
+    .tabla-resultados tr:nth-child(even) {
+      background-color: #fff9f9;
+    }
+    
+    .tabla-resultados tr:hover {
+      background-color: #fff0f0;
+    }
+    
+    .tabla-resultados img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    
+    .botones-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    
+    .mensaje-no-resultados {
+      text-align: center;
+      margin: 40px 0;
+      color: #6c757d;
+    }
+    
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    .pagination button {
+      margin: 0 5px;
+    }
+    
+    .page-info {
+      margin: 0 15px;
+      padding-top: 5px;
+    }
+    
+    .results-title {
+      color: #ff5252;
+      position: relative;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .results-title::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background-color: #ff6b6b;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>DeliBreakfast - Resultados de Búsqueda</h1>
+    </div>
+  </header>
+  
+  <nav>
+    <a href="index.html">Catálogo</a>
+    <a href="registro.html">Registrar Desayuno</a>
+    <a href="busqueda.html">Buscar Desayunos</a>
+  </nav>
+  
+  <main class="container">
+    <div class="resultados-container">
+      <h2 class="results-title">Resultados de la Búsqueda</h2>
+      <p id="resumen-busqueda">Se encontraron <span id="total-resultados">0</span> desayunos que coinciden con su búsqueda.</p>
+      
+      <div id="contenedor-tabla">
+        <table class="tabla-resultados" id="tabla-resultados">
+          <thead>
+            <tr>
+              <th>Imagen</th>
+              <th>Nombre</th>
+              <th>Categoría</th>
+              <th>Código</th>
+              <th>Precio</th>
+              <th>Stock</th>
+              <th>Incluye</th>
+            </tr>
+          </thead>
+          <tbody id="resultados-body">
+            <!-- Los resultados se cargarán aquí -->
+          </tbody>
+        </table>
+        
+        <!-- Paginación -->
+        <div class="pagination">
+          <button id="prev-page" class="btn btn-secondary">Anterior</button>
+          <span class="page-info" id="page-info">Página 1</span>
+          <button id="next-page" class="btn">Siguiente</button>
+        </div>
+      </div>
+      
+      <div id="mensaje-no-resultados" class="mensaje-no-resultados" style="display: none;">
+        <h3>No se encontraron desayunos que coincidan con los criterios de búsqueda.</h3>
+        <p>Intente con diferentes filtros.</p>
+      </div>
+      
+      <div class="botones-container">
+        <button id="btn-limpiar" class="btn btn-secondary">Limpiar búsqueda</button>
+        <a href="busqueda.html" class="btn">Volver a buscar</a>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <p>DeliBreakfast &copy; 2025 - Proyecto Final Fundamentos Web</p>
+    </div>
+  </footer>
+  
+  <script src="js/data.js"></script>
+  <script src="js/resultados.js"></script>
+</body>
+</html>

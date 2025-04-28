@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeliBreakfast - Catálogo de Desayunos Sorpresa</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    
+    .product-card {
+      width: calc(33.333% - 20px);
+    }
+    
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    
+    .product-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #ff5252;
+    }
+    
+    .product-details {
+      margin-top: 10px;
+    }
+    
+    .product-details p {
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+    
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    
+    .pagination button {
+      margin: 0 5px;
+      padding: 5px 12px;
+    }
+    
+    .page-info {
+      margin: 0 15px;
+      padding-top: 5px;
+    }
+    
+    .main-title {
+      position: relative;
+      padding-bottom: 10px;
+    }
+    
+    .main-title::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background-color: #ff6b6b;
+    }
+    
+    @media (max-width: 768px) {
+      .product-card {
+        width: calc(50% - 20px);
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .product-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>DeliBreakfast - Desayunos Sorpresa</h1>
+    </div>
+  </header>
+  
+  <nav>
+    <a href="index.html">Catálogo</a>
+    <a href="registro.html">Registrar Desayuno</a>
+    <a href="busqueda.html">Buscar Desayunos</a>
+  </nav>
+  
+  <main class="container">
+    <section>
+      <h2 class="main-title">Nuestros Desayunos Sorpresa</h2>
+      <p>Explore nuestra selección de deliciosos desayunos para sorprender a esa persona especial.</p>
+      
+      <!-- Contenedor de productos (se llenará con JavaScript) -->
+      <div class="products" id="products-container">
+        <!-- Los productos se cargarán aquí -->
+      </div>
+      
+      <!-- Paginación -->
+      <div class="pagination">
+        <button id="prev-page" class="btn btn-secondary">Anterior</button>
+        <span class="page-info" id="page-info">Página 1</span>
+        <button id="next-page" class="btn">Siguiente</button>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <p>DeliBreakfast &copy; 2025 - Proyecto Final Fundamentos Web</p>
+    </div>
+  </footer>
+  
+  <script src="js/data.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

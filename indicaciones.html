@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeliBreakfast - Indicaciones</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Estilos específicos para la página de indicaciones */
+    .indicaciones-container {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-top: 20px;
+    }
+    
+    .seccion {
+      margin-bottom: 30px;
+    }
+    
+    .seccion h2 {
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #ffcccc;
+      color: #ff5252;
+    }
+    
+    .indicaciones-container ul {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+    
+    .indicaciones-container li {
+      margin-bottom: 8px;
+    }
+    
+    .ejemplo {
+      background-color: #fff5f5;
+      padding: 15px;
+      border-radius: 4px;
+      border-left: 4px solid #ff6b6b;
+      margin-bottom: 20px;
+    }
+    
+    .btn-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .btn-primary {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>DeliBreakfast - Indicaciones</h1>
+    </div>
+  </header>
+  
+  <nav>
+    <a href="index.html">Catálogo</a>
+    <a href="registro.html">Registrar Desayuno</a>
+    <a href="busqueda.html">Buscar Desayunos</a>
+  </nav>
+  
+  <main class="container">
+    <div class="indicaciones-container">
+      <section class="seccion">
+        <h2>Acerca de DeliBreakfast</h2>
+        <p>DeliBreakfast es la tienda líder en desayunos sorpresa, ofreciendo experiencias únicas para regalar a tus seres queridos en ocasiones especiales. Contamos con una amplia selección para todas las ocasiones: cumpleaños, aniversarios, celebraciones y más.</p>
+        <p>Nuestros desayunos están preparados con ingredientes frescos y de alta calidad, presentados de forma atractiva y personalizada para cada ocasión.</p>
+      </section>
+      
+      <section class="seccion">
+        <h2>Cómo Registrar un Desayuno Sorpresa</h2>
+        <p>Para añadir un nuevo desayuno sorpresa al catálogo, siga estas instrucciones:</p>
+        
+        <ul>
+          <li><strong>Nombre del Desayuno:</strong> Ingrese un nombre descriptivo (máximo 20 caracteres).</li>
+          <li><strong>Categoría:</strong> Seleccione la categoría que mejor describe el desayuno (Románticos, Celebraciones, Infantiles, etc).</li>
+          <li><strong>Imagen:</strong> Elija una imagen representativa de nuestra biblioteca.</li>
+          <li><strong>Código:</strong> Cree un código único de al menos 8 caracteres que incluya:
+            <ul>
+              <li>Al menos una letra mayúscula</li>
+              <li>Al menos una letra minúscula</li>
+              <li>Al menos dos números</li>
+            </ul>
+          </li>
+          <li><strong>Precio:</strong> Ingrese el precio en pesos colombianos (sin puntos ni comas).</li>
+          <li><strong>Stock:</strong> Indique la cantidad disponible.</li>
+          <li><strong>¿Qué incluye?:</strong> Describa los elementos que componen el desayuno sorpresa.</li>
+        </ul>
+        
+        <div class="ejemplo">
+          <h3>Ejemplo de Código Válido:</h3>
+          <p><code>DRom2023a</code> - Tiene 8 caracteres, incluye mayúscula (D, R), minúscula (o, m, a) y números (2, 0, 2, 3).</p>
+          
+          <h3>Ejemplos de Códigos No Válidos:</h3>
+          <p><code>DES123</code> - Demasiado corto (menos de 8 caracteres).</p>
+          <p><code>12345678</code> - No tiene letras mayúsculas ni minúsculas.</p>
+          <p><code>DESAYUNO</code> - No tiene números (o tiene menos de 2).</p>
+        </div>
+      </section>
+      
+      <section class="seccion">
+        <h2>Opciones Disponibles</h2>
+        <p>En nuestro sistema podrá:</p>
+        
+        <ul>
+          <li>Explorar el catálogo completo de desayunos sorpresa</li>
+          <li>Registrar nuevos desayunos</li>
+          <li>Buscar desayunos por diferentes criterios (nombre, categoría, precio)</li>
+          <li>Ver resultados detallados de búsquedas</li>
+        </ul>
+      </section>
+      
+      <div class="btn-container">
+        <a href="registro.html" class="btn btn-primary">Ir a Registro de Desayunos</a>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <p>DeliBreakfast &copy; 2025 - Proyecto Final Fundamentos Web</p>
+    </div>
+  </footer>
+  
+  <script src="js/data.js"></script>
+  <script src="js/indicaciones.js"></script>
+</body>
+</html>
